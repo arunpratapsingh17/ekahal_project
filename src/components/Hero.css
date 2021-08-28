@@ -1,0 +1,55 @@
+:root{
+    --primaryDarkColor: #c02c03;
+}
+.hero {
+    min-height: calc(65vh);
+    background: 
+      url("../assets/vege1.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryDarkColor);
+  }
+  .banner {
+    width: var(--smallWidth);
+    max-width: var(--fullWidth);
+  }
+  .hero h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #d7fc03;
+  }
+  .hero p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 1.75rem;
+    color: #f21b07;
+  }
+  .btn-hero {
+    border-radius: 0;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    background: var(--primaryDarkColor);
+    border-color: var(--primaryDarkColor);
+    color: var(--mainBlack);
+  }
+  .btn-hero:hover {
+    color: var(--primaryDarkColor);
+  }
+  @media screen and (min-width: 768px) {
+    .banner {
+      margin-top: 0;
+    }
+  
+    .hero h1 {
+      font-size: 5.3rem;
+    }
+    .hero p {
+      font-size: 2.3rem;
+    }
+    .btn-hero {
+      font-size: 1.2rem;
+      padding: 1rem 3rem;
+    }
+  }

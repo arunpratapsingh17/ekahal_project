@@ -1,0 +1,21 @@
+.navbar_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: brown;
+    max-height: 10%;
+    max-width: 100%;
+}
+.navbar_individual{
+    padding: 2%;
+    text-decoration: none;
+}
+.navbar_individual a{
+    text-decoration: none;
+    color: black;
+}
+.navbar_individual a:hover {
+    color: #03471f;
+    padding: 3px;
+    border: 1px solid black;
+  }
