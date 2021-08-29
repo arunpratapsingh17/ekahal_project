@@ -30,7 +30,7 @@ function App() {
             <Dashboard />
           </PrivateRoute>
         </Switch>
-        <Footer />
+        <Footer className="footer" />
       </Router>
       </AuthProvider>
     </div>

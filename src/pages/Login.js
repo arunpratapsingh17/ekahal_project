@@ -1,6 +1,7 @@
 import React, { useCallback, useContext } from 'react'
 import { withRouter,Redirect } from 'react-router';
 import { auth } from 'firebase';
+import app from '../Firebase';
 import { AuthContext } from '../Authorization'; 
 const Login = ({history}) => {
     const handleLogin = useCallback(
@@ -8,7 +9,7 @@ const Login = ({history}) => {
             event.preventDefault();
             const {email,password} = event.target.elements;
             try{
-                await auth.signInWithEmailAndPassword(email.value,password.value);
+                await app.auth().signInWithEmailAndPassword(email.value,password.value);
                 history.push("/dashboard");
             }
             catch(error){
