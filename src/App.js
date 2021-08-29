@@ -6,24 +6,33 @@ import Home from './pages/Home';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
+import { AuthProvider } from './Authorization';
+import PrivateRoute from './PrivateRoute';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
+    <AuthProvider>
       <Router>
         <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/auth">
-            <Auth />
+          <Route exact path="/signup">
+            <Signup />
           </Route>
-          <Route exact path="/dashboard">
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute exact path="/dashboard">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
         </Switch>
         <Footer />
       </Router>
+      </AuthProvider>
     </div>
   );
 }
