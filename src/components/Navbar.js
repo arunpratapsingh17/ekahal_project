@@ -1,3 +1,4 @@
+import  Menu from './Menu'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
@@ -5,7 +6,8 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <header >
-            <nav>
+            <nav className="nav">
+              <Menu className="menu" />
                 <div className="navbar_list">
                     <div className="navbar_individual">
                        <Link to="/">
