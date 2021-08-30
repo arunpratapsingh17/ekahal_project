@@ -4,6 +4,7 @@ import { auth } from 'firebase';
 import app from '../Firebase';
 import "./Login.css"
 import { AuthContext } from '../Authorization'; 
+import { Link } from 'react-router-dom';
 const Login = ({history}) => {
     const handleLogin = useCallback(
         async event=>{
@@ -14,7 +15,7 @@ const Login = ({history}) => {
                 history.push("/dashboard");
             }
             catch(error){
-                console.log(error);
+                alert(error);
             }
         },[history]
     )
@@ -36,10 +37,13 @@ const Login = ({history}) => {
                     Password
                     <input name="password" type="password" placeholder="Password" />
                 </label>
-                <button type="submit" >
-                    Log in
+                <button type="submit" style={{fontWeight:"bold"}}>
+                    LOG IN
                 </button>
             </form>
+            <button className="signup">
+                <Link to="/signup">Or Signup</Link>
+            </button>
         </div>
     )
 }

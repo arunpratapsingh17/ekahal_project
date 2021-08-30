@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { withRouter } from 'react-router';
 import { auth,provider } from '../Firebase';
-
+import "./Signup.css"
 const Signup = ({history}) => {
     const handleSignup = useCallback(async event =>{
         event.preventDefault();
@@ -19,7 +19,7 @@ const Signup = ({history}) => {
             <h1>
                 Sign Up
             </h1>
-            <form onSubmit={handleSignup}>
+            <form onSubmit={handleSignup} className="signup">
                 <label>
                     Email
                     <input name="email" type="email" placeholder="Email" />

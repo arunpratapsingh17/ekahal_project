@@ -35,7 +35,7 @@ const Navbar = ({history}) => {
                         }}>
                             Signout</button>):
                             (<Link to="/login">
-                            Signin
+                            Login
                            </Link>)}
                     </div>
                 </div>
