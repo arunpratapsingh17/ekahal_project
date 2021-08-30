@@ -11,7 +11,7 @@ const Signup = ({history}) => {
             history.push("/dashboard");
         }
         catch(error){
-            console.log(error);
+            alert(error);
         }
     },[history])
     return (
