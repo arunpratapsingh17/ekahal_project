@@ -11,8 +11,7 @@
     color: var(--primaryDarkColor);
   }
   .banner {
-    width: var(--smallWidth);
-    max-width: var(--fullWidth);
+    /*  */
   }
   .hero h1 {
     font-size: 3rem;

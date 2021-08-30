@@ -2,6 +2,7 @@ import React, { useCallback, useContext } from 'react'
 import { withRouter,Redirect } from 'react-router';
 import { auth } from 'firebase';
 import app from '../Firebase';
+import "./Login.css"
 import { AuthContext } from '../Authorization'; 
 const Login = ({history}) => {
     const handleLogin = useCallback(
@@ -22,7 +23,7 @@ const Login = ({history}) => {
         return <Redirect to="/dashboard" />
     }
     return (
-        <div>
+        <div className="login">
             <h1>
                 Log in
             </h1>
