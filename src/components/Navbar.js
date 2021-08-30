@@ -1,9 +1,13 @@
 import  Menu from './Menu'
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
+import { AuthContext } from '../Authorization'
+import { auth } from 'firebase'
+import app from '../Firebase'
 
-const Navbar = () => {
+const Navbar = ({history}) => {
+    const {currentUser}  = useContext(AuthContext);
     return (
         <header >
             <nav className="nav">
@@ -25,9 +29,14 @@ const Navbar = () => {
                         </Link>
                     </div>
                     <div className="navbar_individual">
-                        <Link to="/auth">
-                            Sigup
-                        </Link>
+                        {(currentUser)?(<button style={{color:"inherit"}} onClick={()=>{
+                            app.auth().signOut();
+                            // history.push("/")
+                        }}>
+                            Signout</button>):
+                            (<Link to="/login">
+                            Signin
+                           </Link>)}
                     </div>
                 </div>
             </nav>

@@ -1,0 +1,62 @@
+.App1 {
+    text-align: center;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: dashed 10px black;
+  }
+  .inputBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* height: 400px;
+    width:40px; */
+    color: white;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  .input{
+    height: 40px;
+    width:100%;
+    flex: 0.8;
+    color: black;
+    background-color: white;
+    border-color: white;
+    border-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .button{
+  color: black;
+  background-color: white;
+  border-color: black;
+  border-left-color: darkblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+  
+  .list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5%;
+  }
+  .apiname{
+    color:white
+  }
+  @media (max-width: 768px){
+    .list{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin: 5%;
+    }
+  }
+  
+  @media (max-width: 480px){
+    .list{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      margin: 5%;
+    }
+  }
+  
+  
