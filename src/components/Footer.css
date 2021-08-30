@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding: 5%;
     max-height: 1vh;
     background-color: white;
+    border-top: solid 2px black;
 }
 .sub-footer{
     text-decoration: solid;

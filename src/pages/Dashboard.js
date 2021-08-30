@@ -1,17 +1,22 @@
 import React from 'react'
 import { auth } from '../Firebase'
 import { withRouter } from 'react-router'
+import Chart from '../components/Chart'
+import Date from '../components/Date'
+import DataTable from '../components/Table/DataTable'
 
 const Dashboard = ({history}) => {
     return (
         <div>
-            Hello from dashboard page
-            <button onClick={()=>{
+            <Chart />
+            <Date />
+            <DataTable />
+            {/* <button onClick={()=>{
                 auth.signOut();
                 history.push("/")
             }}>
                 Sign Out
-            </button>
+            </button> */}
         </div>
     )
 }

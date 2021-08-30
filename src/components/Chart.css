@@ -1,0 +1,12 @@
+.chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom:dashed 10px black;
+}
+.individual_chart{
+    margin-top: 100px;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 20px;
+}
